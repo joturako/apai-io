@@ -254,4 +254,26 @@ class Search extends AbstractOperation
                     $price));
         }
     }
+	
+	/**
+     * Returns the sort param
+     *
+     * @return integer
+     */
+    public function getSort() {
+        return $this->getSingleOperationParameter('Sort');
+    }
+
+    /**
+     * Sets the sort param
+     *
+     * @param integer $param
+     *
+     * @return \ApaiIO\Operations\Search
+     */
+    public function setSort($param) {
+        $this->parameter['Sort'] = $param;
+
+        return $this;
+    }
 }
